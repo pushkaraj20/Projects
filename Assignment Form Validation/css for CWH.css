@@ -1,0 +1,68 @@
+
+
+#reg
+{
+	color: #DCDCDC;
+	margin-left: 18%;
+	font-family: monospace;
+	font-size: 30px;
+}
+#body
+{
+	background-image: url("https://images6.alphacoders.com/614/614633.jpg");
+	background-size:cover ;
+}
+#d2
+{
+    background-color: #DCDCDC;
+    width: 45%;
+	height: 87%;
+	position: fixed;
+	margin-left: 8%;
+	margin-bottom: 5%;
+	border-radius: 40px;
+
+}
+#t1
+{
+	font-family: monospace;
+	font-size: 15px;
+}
+.span
+{
+	color: red;
+	font-family: "Courier New", monospace;
+}
+.span1
+{
+	color: green;
+	font-family: "Courier New", monospace;
+}
+#B1
+{
+	border-radius: 10px;
+	width: 80px;
+	height: 30px;
+	-webkit-transition-duration: 0.5s;
+
+}
+#B1:hover
+{
+	background-color: #28282B;
+	color: #EDEADE;
+}
+#e1
+{
+	color: black;
+	font-weight: bold;
+}
+.x
+{
+	color: blue;
+	font-family: Garamond, serif;
+}
+.C
+{
+	border-radius: 7px;
+	height: 18px;
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css for CWH.css">
+	<title></title>
+</head>
+<body id="body">
+	<h1 id="reg">Registration Open !!!</h1>
+	<center>
+		<form onsubmit="return validation()" action="frontpage.html" name="ValidationForm">
+		<div id="d2">
+		 <table cellpadding="4" cellspacing="1">
+			 <tr><td id="t1" style="font-weight: bold;">Username</td></tr>
+			 <tr><td><input type="text" name="Name" id="name" class="C" placeholder="Enter Username" onfocus="onFocus(this.id)" onblur="onBLur(this.id)"><td><span id="l1" class="span1"></span></td></td></tr>
+			 <tr><td><span id="s1" class="span"></span></td></tr>
+			 <tr><td><span id="x1" class="x"></span></td></tr>
+			 
+
+			 <tr><td id="t1" style="font-weight: bold;">Email</td></tr>
+			 <tr><td><input type="text" name="Email" id="email" class="C" placeholder="Enter Email Id" onfocus="onFocus(this.id)" onblur="onBLur(this.id)"><td><span id="l2" class="span1"></span></td></td></tr>
+			 <tr><td><span id="s2" class="span"></span></td></tr>
+			 <tr><td><span id="x2" class="x"></span></td></tr>
+
+			 <tr><td id="t1" style="font-weight: bold;">Password</td></tr>
+			 <tr><td><input type="password" name="" id="password" class="C" placeholder="Enter Password" onfocus="onFocus(this.id)" onblur="onBLur(this.id)"><td><span id="l3" class="span1"></span></td></td></tr>
+			 <tr><td><span id="s3" class="span"></span></td></tr>
+			 <tr><td><span id="x3" class="x"></span></td></tr>
+
+			  <tr><td id="t1" style="font-weight: bold;">Confirm Password</td></tr>
+			 <tr><td><input type="password" name="Confirm Password" id="cpassword" class="C" placeholder="Confirm your password" onfocus="onFocus(this.id)" onblur="onBLur(this.id)"><td><span id="l4" class="span1"></span></td></td></tr>
+			 <tr><td><span id="s4" class="span"></span></td></tr>
+			 <tr><td><span id="x4" class="x"></span></td></tr>
+
+			 <tr><td id="t1" style="font-weight: bold;">Mobile Number</td></tr>
+			 <tr><td><input type="" name="Mobile Number" id="mobilenumber" class="C" placeholder="Enter mobile Number" onfocus="onFocus(this.id)" onblur="onBLur(this.id)"><td><span id="l5" class="span1"></span></td></td></tr>
+			 <tr><td><span id="s5" class="span"></span></td></tr>
+			 <tr><td><span id="x5" class="x"></span></td></tr>
+
+			 <!-- <center><tr><td id="e1">Gender must be selected</td></tr></center> -->
+			 <tr><td id="t1" style="font-weight: bold;">
+				Gender: <input type="radio" name="n1" id="m1" class="C" value="male">Male<input type="radio" id="m2" value="female" name="n1" >Female</td><td><span id="Error1"></span></td><td><span id="Correct1"></span></td></tr>
+			
+
+			 <tr><td id="t1" align="center" style="font-weight: bold;">Select Club</td><td><span id="Error2"></span></td><td><span id="Correct2"></span></td></tr>
+			 <tr align="center">
+				<td> 
+					<select id="s1" class="C">
+						<option>Select Club</option>
+						<option id="t1">Real Madrid</option>
+						<option id="t1">Manchester United</option>
+						<option id="t1">Juventus</option>
+						<option id="t1">Chelsea</option>
+					</select>
+				</td>
+			</tr>
+
+			 <tr align="center" id="button"><td><input id="B1" type="submit" value="Submit"></td></tr>
+		 </table>
+	     </div>
+		</form>
+	</center>
+	
+
+	<script type="text/javascript">
+
+//------------------------------------------REGULAR EXPRESSIONS-------------------------------------------
+
+ 			var namecheck = /^[A-Z]{1}[A-Za-z]{2,30}$/;
+ 			var emailcheck =  /^[A-Za-z0-9]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,8}$/;
+ 			var passwordcheck =  /^[!@#$%^&*A-Za-z!@#$%^&*]{1,10}[0-9]{1,}$/;
+ 			var mobilecheck = /^[789][0-9]{9}$/;
+
+//--------------------------------------------------------------------------------------------------------
+
+		function validation()
+		{
+			var name = document.getElementById('name').value;
+			if (namecheck.test(name)) 
+			{
+				document.getElementById('l1').innerHTML = " Correct";
+				document.getElementById('s1').innerHTML = "";
+			}
+			else
+			{
+				document.getElementById('s1').innerHTML = "*Please enter proper Username";
+				return false;
+			}
+
+//-------------------------------------------------------------------------------------------------------
+
+			var email = document.getElementById('email').value;
+			if (emailcheck.test(email)) 
+			{
+				document.getElementById('l2').innerHTML = "Correct ";
+				document.getElementById('s2').innerHTML = "";
+			}
+			else
+			{
+				document.getElementById('s2').innerHTML = "*Enter valid email";
+				return false;
+			}
+//---------------------------------------------------------------------------------------------------------
+
+			var password = document.getElementById('password').value;
+			if (passwordcheck.test(password)) 
+			{
+				document.getElementById('l3').innerHTML = " Correct";
+				document.getElementById('s3').innerHTML = "";
+			}
+			else
+			{
+				document.getElementById('s3').innerHTML = "*Enter atleast one special char and number";
+				return false;
+			}
+//----------------------------------------------------------------------------------------------------------
+			var cpassword = document.getElementById('cpassword').value;
+			if (cpassword.match(password)) 
+			{
+				document.getElementById('l4').innerHTML = "Correct ";
+				document.getElementById('s4').innerHTML = "";
+			}
+			else
+			{
+				document.getElementById('s4').innerHTML = "Password is not matching";
+				return false;
+			}
+//----------------------------------------------------------------------------------------------------------
+			var mobilenumber = document.getElementById('mobilenumber').value;
+			if (mobilecheck.test(mobilenumber)) 
+			{
+				document.getElementById('l5').innerHTML = " Correct";
+				document.getElementById('s5').innerHTML = "";
+			}
+			else
+			{
+				document.getElementById('s5').innerHTML = "*Enter 10 digit number";
+				return false;
+			} 
+
+		}
+//----------------------------------------------Focus In----------------------------------------------------
+
+		function onFocus(id)
+		{ 
+			if (id=="name")
+			 x1.innerHTML = "Minimum three characters are required and first letter should be capital";
+
+			if(id=="email") 
+			 x2.innerHTML = "Enter email in proper format";
+			
+			if (id=="password")
+			 x3.innerHTML = "Required one special symbols and numbers";
+			
+			if(id=="cpassword")
+			 x4.innerHTML = "Write same password";
+
+			if(id=="mobilenumber")
+			 x5.innerHTML = "Number start from 7,8 or 9";
+	
+		}	
+
+		function onBLur(id)
+		{
+			if (id=="name")
+			 x1.innerHTML = "";
+
+			if (id=="email")
+			 x2.innerHTML = "";
+
+			if (id=="password")
+			 x3.innerHTML = "";
+
+			if (id=="cpassword")
+			 x4.innerHTML = "";
+
+			if (id=="mobilenumber")
+			 x5.innerHTML = "";
+		}
+
+//-------------------------------------------------------------------------------------------			
+		
+	</script>
+
+</body>
+</html>

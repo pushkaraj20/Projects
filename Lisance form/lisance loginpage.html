@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Instructions Page</title>
+	<link rel="stylesheet" type="text/css" href="">
+	<style type="text/css">
+		fieldset
+		{
+			margin-top: 15%;
+			width: 50%;
+		}
+		.c1{
+			color: red;
+		}
+	</style>
+</head>
+<body bgcolor="#f0f8ff">
+	<form action="D:\Web Development\Java Script\Projects\Lisance form\Driving Lisance  Form.html">
+		<center>
+		<fieldset>
+			<legend align=center><h2>Fill the form</h2></legend>
+			 <table cellpadding="5" cellspacing="5" align="center">
+				<tr>
+					<td>Name</td>
+					<td><input id="ip1" type="" name="name"></td>
+					<td><span id="sp1" class="c1"></span></td>
+				</tr>
+				<tr>
+					<td>Age</td>
+					<td><input id="ip2" type="number" name="name"></td>
+					<td><span id="sp2" class="c1"></span></td>
+				</tr>
+				<tr>
+					<td><label>Type of Vehicle</label></td>
+					<td>Gear<input type="radio" name="comm"> Without-Gear<input type="radio" name="comm"></td>
+				</tr>
+		
+				<tr><td><button id="btn">Submit</button></td></tr>
+			</table>
+
+		</fieldset>
+		</center>
+	</form>
+</body>
+
+	<script>
+		document.querySelector('#btn').onclick =
+		function()
+		{
+			if (document.querySelector("#ip1").value.length==0)
+			{
+				document.getElementById('sp1').innerHTML = "Required";
+				return false;
+			}
+			if (document.querySelector("#ip2").value.length==0)
+			{
+				document.getElementById('sp2').innerHTML = "Required";
+				return false;
+			}
+			if (document.querySelector('#ip2').value<18) 
+			{
+				alert("You are not applicable");
+				document.querySelector("#ip1").value=""
+				document.querySelector("#ip2").value=""
+				return false;
+			}
+			else
+			{
+				return true;
+			}
+		}
+	</script>
+</html>

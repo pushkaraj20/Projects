@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Driving Lisance Form</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body bgcolor="#F5F5F5"><center>
+	<center><h2>NEW DRIVING LISANCE REGISTRATION</h2></center>
+	<div id="div1"><center>DEMOGHRAPHIC DETAILS</center></div>
+	<div id="div2">
+	<table cellpadding="5" cellpadding="5" id="table">
+		<tr>
+			<td>
+				<form onsubmit="event.preventDefault(); onFormSubmit();" autocomplete="off">
+					<div>
+						<label>Applicant Full Name</label>
+						<input type="text" name="Full Name" id="fullName">
+					</div>
+
+					<div>
+						<label>Age</label>
+						<input type="text" name="Salary" id="age">
+					</div>
+
+					<div>
+						<label>Gender</label>
+						<input type="text" name="Salary" id="gender">
+					</div>
+
+					<div>
+						<label>Education</label>
+						<input type="text" name="education" id="education">
+					</div>
+
+					<div>
+						<label>Occupation</label>
+						<input type="text" name="Occupation" id="occupation">
+					</div>
+
+					<div>
+						<label>Blood Group</label>
+						<input type="text" name="Bg" id="bg">
+					</div>
+
+					<div>
+						<label>Citizenship</label>
+						<input type="text" name="Citizenship" id="citizenship">
+					</div>
+
+					<div>
+						<label>DOB</label><br>
+						<input type="date" name="Employee Code" id="dob">
+					</div>
+
+					<div>
+						<label> Select State</label><br>
+						<select id="state" name="state">
+						    <option>State</option>
+						    <option>Maharashtra</option>
+						    <option>Goa</option>
+						    <option>Gujarat</option>
+						    <option>Assam</option>
+						    <option>Bihar</option>
+						</select>
+					</div>
+
+					<div class="sub">
+						<input type="submit" name="" value="submit">
+					</div>
+				</form>
+			</td>
+			<tr>
+				<table class="list" id="employeeList" cellpadding="10" cellspacing="10">
+					<tr id="head">
+						<th>Full Name</th>
+						<th>DOB</th>
+						<th>Age</th>
+						<th>Gender</th>
+						<th>Education</th>
+						<th>Occupation</th>
+						<th>Blood Group</th>
+						<th>Citizenship</th>
+						<th>State</th>
+						<th>Edit</th>
+						<th>Delete</th>
+				    </tr>
+				</table>
+			</tr>
+		</tr>
+	</table>
+	</div>
+	</center>
+	<script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>
